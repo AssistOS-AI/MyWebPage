@@ -19,5 +19,9 @@
       "presenterName":"myWebPage",
       "forComponent": "my-web-page"
     }
-  ]
+  ],
+  "manager": {
+    "path": "manager.js",
+    "name": "Manager"
+  }
 }
