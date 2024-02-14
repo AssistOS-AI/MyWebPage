@@ -1,8 +1,3 @@
-import {
-    closeModal,
-    extractFormInformation
-} from "../../../aiauthor-workspace/apihub-root/wallet/imports.js";
-
 export class addPageModal {
     constructor(element, invalidate) {
         this.invalidate = invalidate;
@@ -15,15 +10,14 @@ export class addPageModal {
         webSkel.currentUser.space.documents.forEach((document) => {
             this.documentOptions += `<option value="${document.id}">${document.title}</option>`;
         });
-        debugger;
     }
 
     closeModal(_target) {
-        closeModal(_target);
+        webSkel.closeModal(_target);
     }
 
     async addPageSubmitForm(_target) {
-        let formInfo = await extractFormInformation(_target);
+        let formInfo = await  webSkel.extractFormInformation(_target);
         if (formInfo.isValid) {
             const selectedDocumentId = formInfo.data.document;
             const selectedDocument = webSkel.currentUser.space.documents.find((document) => {
