@@ -6,7 +6,6 @@ export class addPageModal {
 
     beforeRender() {
         this.documentOptions = "";
-        const select = document.querySelector('select');
         webSkel.currentUser.space.documents.forEach((document) => {
             this.documentOptions += `<option value="${document.id}">${document.title}</option>`;
         });
