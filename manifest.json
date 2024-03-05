@@ -5,32 +5,15 @@
   "entryPointComponent": "my-web-page",
   "components":[
     {
-      "componentName": "my-web-page",
-      "componentPath": "web-components/my-web-page/my-web-page.html",
-      "componentPresenter": "myWebPage",
-      "cssPaths": [
-        "web-components/my-web-page/my-web-page.css"
-      ]
+      "name": "my-web-page",
+      "presenterClassName": "myWebPage",
+      "type": "pages"
     },
     {
       "componentName": "add-page-modal",
-      "componentPath": "web-components/add-page-modal/add-page-modal.html",
-      "componentPresenter": "addPageModal",
-      "cssPaths": [
-        "web-components/add-page-modal/add-page-modal.css"
-      ]
-    }
-  ],
-  "presenters": [
-    {
-      "presenterPath": "web-components/my-web-page/my-web-page.js",
-      "presenterName":"myWebPage",
-      "forComponent": "my-web-page"
-    },
-    {
-      "presenterPath": "web-components/add-page-modal/add-page-modal.js",
-      "presenterName":"addPageModal",
-      "forComponent": "add-page-modal"
+      "presenterClassName": "addPageModal",
+      "type": "modals"
+
     }
   ],
   "manager": {
